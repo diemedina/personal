@@ -1,0 +1,260 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Diego Medina.">
+	<main>
+		<section class="screen">
+			<h2>
+				Hey there <img src="data:image/png;base64,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">
+			</h2>
+			<h1>I'm Diego Medina</h1>
+			<h4>Frontend Developer & Web Designer</h4>
+			
+			<div>
+				<span class="experience"><b>8</b> years <br> experience</span>
+				<span class="location">
+					Argentina
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1UlEQVR4nO2VPQuCUBSG/Q/WL9SpIYiQ+icGDW3RlItSIEFza4StQZFXrx+Vb7S90eKsgkFxH3i3c3jgcDhH0xSKJhgeZoaLbavxMCuFpouD6T3ZalwclJD/M9IgLBDlYNWEIqZI0sr1UQ5+HKXwJPECwCqRO4eXeY/SHzML/Eo9APhx1BYWuWS0HlDYOiNbZ+hYvCeiPeEji3ldDimnXYpJh8nGIopbe0IAzI8+Y3/E86LPdL9qNtKg7tLEkiLJmi+NqU6b9+uXxvy20Pj2A1YotBq8Adrf8Jnp9GbxAAAAAElFTkSuQmCC">
+				</span>
+			</div>
+		</section>
+		<section class="experience">
+			<h1 class="title">Experience.</h1>
+			<article>
+				<span>Jun. 2019 - Present (4 years, 6 months)<br>Argentina</span>
+				<b>Pirca Solutions</b>
+				<p>
+					Front-end developer for administration projects, radio/video automation and products related to video calls
+				</p>
+			</article>
+			<article>
+				<span>Jan. 2019 - Jun. 2019 (6 months)<br>Argentina</span>
+				<b>Ego Agency</b>
+				<p>
+					Front-end developer at Bank Santander for Home Banking project, in the Investment area.
+				</p>
+			</article>
+			<article>
+				<span>Dec. 2015 - Jan.2019 (3 years, 2 months)<br>Argentina</span>
+				<b>Viajobien.com</b>
+				<p>
+					Front-end developer in the products Hotels, Tourist Packages, Build your trip, Assistance and Backoffice for several countries (Argentina, Chile, Uruguay).
+				</p>
+			</article>
+		</section>
+		<section class="aboutme">
+			<h1 class="title">About me.</h1>
+			<img src="/personal/about-me.jpg" alt="Diego Medina">
+			<p>I'm Diego Medina, a front-end developer with over 8 years of experience in the web industry. I currently live in Buenos Aires, Argentina, and I'm passionate about web development. Since I started in the industry, I have worked on challenging projects that have allowed me to learn and grow professionally. I am always looking for new ways to improve my skills and learn new technologies.</p>
+		
+			<ul>
+				<li>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEDElEQVR4nO2ay0tVQRzHT2JUUNgLCnRRgY/ETNPKyhYJ0YNq1aKlRfYEw1rUKooWkqYmPaxW0T9RURr0MhF60LYyy0VlalGZWvaJ4Q50k3PvnZkzc+8VzgcuyPWc3/f7m3vOPH4znhcSEhISEuIUoAA4ALQB7cBrYBAYkx/x9yv5v8vAfiDfm8wAJUAz0Ic574EmYLk3GQCmANuBTuzzGNgmNLx0BFgFdOOeLqDcSxeAGcAFYJzkIbRagempTj4feEHqeAbkpir51cBnUo8YQSqTnfwWYJj04QewOVnJVwDfST+GnT8JRN75IdKXAWd9ApHePlGH1wGcBm4DIxYT+wnckrHvJLj2qZPRAbioYHR31PULgJPAxwCJfwDqgKyouDsV7jvvYpIzriCc53PvHOCGQfLXgdk+8XIV7v0NrLA5ve1WNJ0VJ04tcAWoBkqBbPlaiU+O/K5aXlMbJ45oUBU6rUybicztVckMLJjYT6aGny02BDs1BOdayTK+nywNP49sLGl1KLCWaWxPi7QcQXEQsWZNsV1Ws/X3VKXpqTGIWJ+G0B8r71xiTxukliq9QWZ9Opy1nm1sb6JKpIP+7JBIDU+VXmCak2z9vU0H3mn422ci0qYhUOMkU3s/0CUTgQ7F4GLOP8tJlvH9zdRYb9wxEehRDH7TSYZqHsWiS4XXJsEHFIM3OMlOzeM5RY/9JsFHFYPXOclOzeMxRY8jJsHHFIMfdZKd3QYYNQn+Jd3G/wCvwKDLTrDdSXZqHu+57AQ7FIP/AuY5yTC+v/lSW4W7JgLXUKfeSZbx/TVo+GszEajRLFoWOcnU31uxZtF1j4lIEXqI9UC2k4z/95Ujt811WGoq9kZTSCyfK6xn/c9PGfBW01NPEMFW9BmVhRRr5TERC2jRmJtE0xJEuBRzvsoKr9hKyzDQzgDWAFdlLFPMS2IC4IlP0CFZ5habJd8UTIh1xV5PEbF+11iLxOOhqmZMgB0+gUVJql7+SnkKnVKXTsFE7hX4NbwuW1U1E22MiAT8OBX1qsRaPInGKjGsSIsdHlM6dTVjAqyMsTUmkl4orzkUw8g9z/16fyKi4cpMdXVHhONR15zxqdie8AwBDhs2QLOpZqJC5HMfsZfRe3DyaWmQQ+HBIOsEYJPhuSE3BVoiO7N+54L2OtIr10y+3/mhKaBSzv0nDovFjmZ+Okdk1tr24AuwUR5MikZMVo5MOMwwNcjjqNEA4sxSlamOEcB6+cj5jQw9cuNiNEhvrNgAn4B1XioAliicG3LZAKLDW2w3K7PRoSnOERoXDSC0GpO5HZcQcSYHeJCEBuhyueS2MW3eKhYhDhrgfjK2360BLJOvRmGAGIWy9J20cpsTTOsBbtyEhISEhIR4kr+i680TiXDwqwAAAABJRU5ErkJggg==">
+				</li>
+				<li>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVR4nO2ZO0oEQRRFnyhmOoKmgoHuwD0oOI2GomBm6BZMZMCFuAYzx1EXYqb4YUB7IpMjJR01U3a1HXhreAcqu13F4dXr6o+Z4zh/AtgHRsCE/2cC3AJFW4lLdBm0qYQ6/RSRsJ3UGaaIlOjzmSKSBeYiM1aRZ+AQWK3GMfBKhiI7Krdr6yiyPCXfI0ORYkq+T4Yib8AJsFaN0CMvZCgig7nILFXEEq5JyDxUZ9E6sAgsAdvAOfCeg0g4OHcb1l4BrtVFNhsXt5/cAnAvK9IGYAP4khcB5hMyV7IiwBnwVEUfgdNfskeSIsBBm/dvYEtV5C4y7SiS76mKjCPTjiP5OVWRTvPWcZGAV8R8a0XxHgl4j5j3SBTvETWsyyNKbiIl+nykiIS/p+rcpIgU6LPXKFLJDNDlIkmi9pV9KNIzZdhOyZVwHMfqfANKiIQn/4RZwwAAAABJRU5ErkJggg==">
+				</li>
+				<li>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAChklEQVR4nO2Yu2sVQRSHRyNiJIqSKIJRCwWDKIhYiATSaKVFbIJVulSCKcQmNv4FgpVYiYJYKQRUMGmCoo0WgiCCFiq+ICCKr4hJPjlyLkzW2d3Zx527ynwQ7s29c878vn3OXWMikUgk0gSALcAJ4BxwEtjYgEybgTPABeCUZMwrOAZ8ZylftXhZsOSKzAmcBn4kMn0Cho0LYMBRYHML6DOBADYAtzPySNadrsLL5PMmoMhbjzyXXIXvPAqxxne1IXyX9Z5SGxZYKCgyIydhzSf0TEGRBVcjLxLjZ4EjNUgcAt47+nvnqSoiLALngZUlBFYAZ+2jwXRQpMVDYHsBia3A/QL9nbgaj+o9I5OciT4Dxz0khoGPJfrbyP1uPOte8pgMPCe6Aqx29F+lh2HV/k+BPWkSu/W1G7hYcSJ0gwwU2Uie/SVbt505KSK7asz6f0SXAmVFhC96yI7q+1xMen/JMmJ9PyaZXSItrgPr9LNtwIMKIoUx7v6PgB36+RrganK8S0R4CRxwXSIDiyzal3ZgH/DcNT5NRPilAsv1+8PAh4Ais8BRaxU8Dsyljc8SaTEJ9OqY/oAi/fraqxkyx/uICK+BwcT4+fo1mE/MMahzU5dI61CbsMYPyeqzPoc/vYas/hM6J3WL/FUoP7SAm5UVYBrYVDVPpULrRPxZQmDJBaWjIlb9fuBFAYlXwMGMfp0R0R5rgWsebW4A63N6dU7E6iVLkm8pDwzcK9YmigjALuCJVfoM2Gs8oSki2rNHH/TJX0/B2uaIVIGyeaJImyDuEU/atQfiHkniu1YygcCPOVfh9D8oMuUqlAcNUzl75m5AkXsZOSTjHXlaGSpPJBKJRP5vfgN7EhHwkoccoQAAAABJRU5ErkJggg==">
+				</li>
+			</ul>
+		</section>
+		<section class="works">
+			<h1 class="title">Works.</h1>
+			<article>
+				<img src="/personal/sebastian.png" alt="Sebastian Perez">
+				<a href="">Visit site</a>
+			</article>
+		</section>
+		<section>
+		</section>
+	</main>
+	<footer>
+		<b>DM.</b>
+		<span>Made with ❤️</span>
+	</footer>
+</Layout>
+
+<style>
+	header {
+		color: white;
+	}
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		line-height: 1.6;
+		overflow-x: hidden;
+	}
+	.title {
+		font-size: 2rem;
+		font-weight: 600;
+		color: #fff;
+		text-align: center;
+	}
+	.screen {
+		height: 100svh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 15rem;
+
+		h1, h2, h4 {
+			margin: 0;
+		}
+
+		h1 {
+			font-size: 2.4rem;
+			font-weight: bold;
+			line-height: 2rem;
+			margin-bottom: 16px;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: lighter;
+			display: flex;
+			gap: 8px;
+		}
+
+		h4 {
+			color: #8b949e;
+			font-weight: lighter;
+		}
+
+		div {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-top: auto;
+			margin-bottom: 4rem;
+		}
+
+		.experience {
+			text-transform: uppercase;
+			display: flex;
+			gap: 8px;
+			align-items: center;
+			line-height: 1.3rem;
+
+			b {
+				font-size: 3rem;
+			}
+		}
+
+		.location {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+			color: #8b949e;
+			margin-bottom: -.2rem;
+		}
+	}
+	.experience {
+		article {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			margin: 2rem 0;
+			position: relative;
+
+			&::before {
+				content: '';
+				background: linear-gradient(#706be0, #0b1345);
+				width: 1px;
+				height: 100%;
+				left: -12px;
+				top: 0px;
+				position: absolute;
+			}
+			
+			span {
+				font-weight: lighter;
+			}
+
+			b {
+				font-weight: bold;
+				font-size: 1.2rem;
+			}
+
+			p {
+				margin: 0;
+			}
+		
+		}
+	}
+	.aboutme {
+		img {
+			border-radius: 12px;
+		}
+
+		ul {
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			gap: 12px;
+			margin: 0;
+			padding: 0;
+
+			li {
+				border-top: 1px solid #717171;
+				background: linear-gradient(#404040, #1f1f1f);
+				border-radius: 12px;
+				padding: 4px 8px;
+				width: 50px;
+				aspect-ratio: 1;	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					width: 32px;
+				}
+			}
+		}
+	}
+	.works {
+		article {
+			position: relative;
+
+			img {
+				border-radius: 12px;
+			}
+	
+			a {
+				position: absolute;
+				bottom: 4px;
+				right: 4px;
+				background: rgba(0, 0, 0, .5);
+				border: 1px solid #ffffff33;
+				backdrop-filter: blur(12px);
+				padding: 2px 12px;
+				border-radius: 12px;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #ffffffb3;
+				font-size: .8rem;
+				font-weight: 400;
+			}
+		}
+	}
+	footer {
+		padding: 12px 0px;
+		max-width: calc(100% - 2rem);
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: rgba(255, 255, 255, 0.5);
+		font-weight: lighter;
+		
+		b {
+			font-weight: bold;
+		}
+	}
+
+
+</style>
