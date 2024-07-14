@@ -1,0 +1,376 @@
+---
+import { Image } from 'astro:assets';
+import AboutMeImage from '../assets/images/about-me.jpg';
+---
+<section id="aboutme" class="aboutme animate">
+  <h2>About me</h2>
+  <div class="aboutme__container">
+    <div class="aboutme__container__image">
+      <Image src={AboutMeImage} alt='About me - Image profile'></Image>
+      <div>NAB Show 2023, Las Vegas</div>
+    </div>
+    <article>
+      <p>
+        I'm Diego Medina, a front-end developer with over <strong>8 years of experience</strong> in the web industry. I currently live in <strong>Buenos Aires, Argentina</strong>, and I'm passionate about web development. 
+      </p>
+      <p>
+        Since I started in the industry, I have worked on challenging projects that have allowed me to learn and grow professionally. I am always looking for new ways to improve my skills and learn new technologies.
+      </p>
+    </article>
+    
+    <div class="skills">
+      <h4>SKILLS</h4>
+      <div class="container">
+        <div class="row">
+          <div>
+            <img src="https://svgl.app/library/html5.svg" alt="HTML">
+            HTML
+          </div>
+          <div>
+            <img src="https://svgl.app/library/css.svg" alt="CSS">
+            CSS
+          </div>
+          <div>
+            <img src="https://svgl.app/library/javascript.svg" alt="Javascript">
+            Javascript
+          </div>
+          <div>
+            <img src="https://svgl.app/library/typescript.svg" alt="Typescript">
+            Typescript
+          </div>
+          <div>
+            <img src="https://svgl.app/library/git.svg" alt="Git">
+            Git				
+          </div>
+          <div>
+            <img src="https://svgl.app/library/html5.svg" alt="HTML">
+            HTML
+          </div>
+          <div>
+            <img src="https://svgl.app/library/css.svg" alt="CSS">
+            CSS
+          </div>
+          <div>
+            <img src="https://svgl.app/library/javascript.svg" alt="Javascript">
+            Javascript
+          </div>
+          <div>
+            <img src="https://svgl.app/library/typescript.svg" alt="Typescript">
+            Typescript
+          </div>
+          <div>
+            <img src="https://svgl.app/library/git.svg" alt="Git">
+            Git				
+          </div>
+
+          
+          
+        </div>
+        <div class="row">
+          <div>
+            <img src="https://svgl.app/library/vue.svg" alt="Vue">
+            Vue
+          </div>
+          <div>
+            <img src="https://svgl.app/library/react.svg" alt="React">
+            React
+          </div>
+          <div>
+            <img src="https://svgl.app/library/astro.svg" alt="Astro">
+            Astro
+          </div>
+          <div>
+            <img src="https://svgl.app/library/angular.svg" alt="Angular">
+            Angular
+          </div>
+          <div>
+            <img src="https://svgl.app/library/nextjs_icon_dark.svg" alt="Nextjs">
+            NextJs
+          </div>
+          <div>
+            <img src="https://svgl.app/library/vue.svg" alt="Vue">
+            Vue
+          </div>
+          <div>
+            <img src="https://svgl.app/library/react.svg" alt="React">
+            React
+          </div>
+          <div>
+            <img src="https://svgl.app/library/astro_dark.svg" alt="Astro">
+            Astro
+          </div>
+          <div>
+            <img src="https://svgl.app/library/angular.svg" alt="Angular">
+            Angular
+          </div>
+          <div>
+            <img src="https://svgl.app/library/nextjs_icon_dark.svg" alt="Nextjs">
+            NextJs
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <img src="https://svgl.app/library/nodejs.svg" alt="Node">
+            Node
+          </div>
+          
+          <div>
+            <img src="https://svgl.app/library/nestjs.svg" alt="NestJs">
+            NestJs
+          </div>
+
+          <div>
+            <img src="https://svgl.app/library/mysql.svg" alt="MySQL">
+            MySQL		
+          </div>
+          <div>
+            <img src="https://svgl.app/library/mongodb.svg" alt="MongoDB">
+            MongoDB
+          </div>
+          <div>
+            <img src="https://svgl.app/library/sass.svg" alt="SASS">
+            SASS
+          </div>
+          <div>
+            <img src="https://svgl.app/library/nodejs.svg" alt="Node">
+            Node
+          </div>
+          <div>
+            <img src="https://svgl.app/library/nestjs.svg" alt="NestJs">
+            NestJs
+          </div>
+          <div>
+            <img src="https://svgl.app/library/mysql.svg" alt="MySQL">
+            MySQL		
+          </div>
+          <div>
+            <img src="https://svgl.app/library/mongodb.svg" alt="MongoDB">
+            MongoDB
+          </div>
+          <div>
+            <img src="https://svgl.app/library/sass.svg" alt="SASS">
+            SASS
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interest">
+      <h4>INTEREST</h4>
+      <div>
+        <img src="https://svgl.app/library/openai.svg" alt="OpenAI">
+        OpenAI
+      </div>
+      <div>
+        <img src="https://svgl.app/library/photoshop.svg" alt="Photoshop">
+        Photoshop
+      </div>
+      <div>
+        <img src="https://svgl.app/library/illustrator.svg" alt="Illustrator">
+        Illustrator
+      </div>
+      <div>
+        <img src="https://svgl.app/library/figma.svg" alt="Figma">
+        Figma
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .aboutme__container {
+		display: grid;
+		grid-template-areas: 
+		"image aboutme aboutme"
+		"image skills interest";
+		grid-template-columns: 280px 1fr 182px;
+		grid-template-rows: 161px 1fr;
+		gap: 12px;
+		// max-height: 420px;
+
+    @media (max-width: 925px) {
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "image aboutme"
+        "image interest"
+        "image skills";
+
+      &__image {
+        max-height:450px;
+      }
+
+      .interest {
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+      }
+    }
+
+    // Mobile
+    @media (max-width: 675px) {
+      justify-items: center;
+      max-height: fit-content;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "image"
+        "aboutme"
+        "skills"
+        "interest";
+
+      &__image {
+        max-width: 300px;
+        max-height:450px;
+      }
+    }
+
+		&__image {
+			grid-area: image;
+      width: fit-content;
+      position: relative;
+			
+			img {
+        border-radius: 12px;
+			}
+      
+			div {
+				position: absolute;
+				right: 6px;
+				bottom: 12px;
+				background-color: #edededb8;
+				backdrop-filter: blur(12px);
+				padding: 4px 8px;
+				border-radius: 6px;
+				font-size: 12px;
+			}
+		}
+
+		article, .skills, .interest {
+			border: 1px solid rgba(193, 192, 192, 0.886);
+			padding: 12px;
+			border-radius: 12px;
+			background: #edededb8;
+			width: 100%;
+			height: 100%;
+		}
+	
+		article {
+			grid-area: aboutme;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+		}	
+
+		.skills {
+			grid-area: skills;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			.container {
+				overflow: hidden;
+        max-width: 100%;
+				position: relative;
+
+				&::before,
+				&::after {
+					background: linear-gradient(to right, #edededb8 0%,rgba(255,255,255,0) 100%);
+					content: "";
+					height: 100%;
+					position: absolute;
+					width: 60px;
+					z-index: 2;
+				}
+				
+				&::after {
+					right: 0;
+					top: 0;
+					transform: rotateZ(180deg);
+				}
+
+				&::before {
+					left: 0;
+					top: 0;
+				}
+
+				.row {
+					@keyframes scroll {
+						0% { transform: translateX(0) }
+						100% { transform: translateX(-50%)}
+					}
+					@keyframes scroll-reverse {
+						0% { transform: translateX(-50%)}
+						100% { transform: translateX(0)}
+					}
+
+					display: inline-flex;
+					gap: 12px;
+					width: max-content;
+					padding: 8px 0px;
+					animation: scroll 16s linear infinite;
+
+					&:first-child, &:last-child {
+						animation-name: scroll-reverse;
+					}
+
+					div {
+						width: fit-content;
+						height: 48px;
+						border: 1px solid #d7d7d7b8;
+						padding: 0px 4px;
+						border-radius: 4px;
+						display: flex;
+						align-items: center;
+						gap: 8px;
+		
+						img {
+							border-radius: 4px;
+							padding: 4px;
+							height: 40px;
+						}
+					}
+				}
+			}
+
+		}
+
+		.interest {
+			grid-area: interest;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+			flex-wrap: wrap;
+			justify-content: center;
+			justify-items: center;
+			gap: 8px;
+
+      h4 {
+				grid-column: 1/3;
+				width: 100%;
+			}
+
+      @media (max-width: 925px) {
+        grid-template-columns: repeat(4, 1fr);
+
+        h4 {
+          grid-column: 1/5;
+        }
+      }
+
+
+
+			div {
+				color: #1f2937;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 6px;
+				width: fit-content;
+
+				svg, img {
+					width: 3rem;
+					height: 3rem;
+				}
+			}
+		}
+	}
+</style>

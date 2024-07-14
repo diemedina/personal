@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Principal from '../components/Principal.astro';
+import Experience from '../components/Experience.astro';
+import CallToAction from '../components/CallToAction.astro';
+import AboutMe from '../components/Aboutme.astro';
+import Works from '../components/Works.astro';
+---
+
+<Layout title="Diego Medina.">
+	<nav>
+		<h2>DM.</h2>
+		<div>
+			<a href="#experience">Experience</a>
+			<a href="#aboutme">About me</a>
+			<a href="#works">Works</a>
+		</div>
+	</nav>
+	<Principal></Principal>
+	<Experience></Experience>
+	<CallToAction></CallToAction>
+	<AboutMe></AboutMe>
+	<Works></Works>
+	<footer>
+		<span>Made with ❤️</span>
+		<div class="links">
+			<a href="https://www.linkedin.com/in/diego-ezequiel-medina/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+			<a href="mailto:die.medinaa@gmail.com">Email</a>
+			<a href="https://github.com/diemedina" target="_blank" rel="noopener noreferrer">Github</a>
+		</div>
+	</footer>
+</Layout>
+
+<style lang="scss">
+	nav {
+		position: fixed;
+		top: 24px;
+		left: 50%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90dvw;
+		max-width: 500px;
+		background: #edededb8;
+		backdrop-filter: blur(8px);
+		border-radius: 500px;
+		padding: 12px 24px;
+		transform: translateX(-50%);
+		z-index: 1;
+		
+		h2 {
+			margin: 0;
+		}
+	
+		div {
+			display: flex;
+			gap: 12px;
+		
+			a {
+				cursor: pointer;
+				text-decoration: none;
+				color: black;
+				transition: all .3s;
+
+				&:hover {
+					scale: 1.03;
+				}
+			}
+		}
+
+		@keyframes slideInFromLeft {
+			0% {
+				transform: translateX(-50%) translateY(-100%);
+			}
+			100% {
+				transform: translateX(-50%) translateY(0%);
+			}
+		}
+
+		animation: 1s ease-out 0s 1 slideInFromLeft;
+	}
+	footer {
+		background: black;
+		color: whitesmoke;
+		display: flex;
+		justify-content: space-between;
+		padding: 3rem 3rem 2rem 3rem;
+		position: relative;
+
+		.links {
+			display: flex;
+			gap: 12px;
+			
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 24px;
+			background-color: whitesmoke;
+			border-radius: 0 0 12px 12px;
+		}
+	}
+</style>

@@ -1,0 +1,83 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Diego Ezequiel Medina - Frontend developer" />
+		<meta property="og:title" content="Diego Medina.">
+    <meta property="og:description" content="Diego Ezequiel Medina - Frontend Developer">
+    <meta property="og:image" content="https://www.ejemplo.com/imagen.jpg">
+		<meta property="og:url" content="https://diemedina.github.io/personal/">
+		<meta property="og:type" content="website">
+
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style lang="scss" is:global>
+	html {
+		font-family: 'Nunito', system-ui, sans-serif;
+		background: whitesmoke;
+		scroll-behavior: smooth;
+	}
+
+	* { margin: 0; padding: 0px; }
+	*, *::after, *::before { box-sizing: border-box; }
+	body { min-height: 100dvh; margin: 0 auto}
+	input, button, textarea, select { font: inherit; }
+	p { text-wrap: pretty; }
+	h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+	img, video, svg { height: auto; max-width: 100%; }
+	section {width: min(90dvw, 56rem); margin: 0 auto 5rem auto; }
+	section h2 { margin-bottom: 1rem; font-size: 2rem;}
+
+	.pill {
+		border: 1px solid;
+		border-color: #1f2937;
+		color: #1f2937;
+		padding: 3px 12px;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		width: fit-content;
+
+		img {
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	@keyframes appear {
+		from {
+			opacity: 0.6;
+    	transform: perspective(1200px) translateX(0px) translateY(20px) scale(0.95) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+		}
+		to {
+			opacity: 1;
+    	transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+		}
+	}
+
+	.animate {
+		animation: appear linear;
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+	}
+</style>
