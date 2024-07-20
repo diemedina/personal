@@ -3,6 +3,23 @@ import { Image } from 'astro:assets';
 import PircaImage from '../assets/images/pirca_logo.jpeg';
 import EGOImage from '../assets/images/agenciaego_logo.jpeg';
 import ViajobienImage from '../assets/images/viajobiencom_logo.jpeg';
+
+function calculateDate(dateFrom) {
+    const _dateFrom = new Date(dateFrom);
+    const _dateNow = new Date();
+
+    let years = _dateNow.getFullYear() - _dateFrom.getFullYear();
+    let months = _dateNow.getMonth() - _dateFrom.getMonth();
+
+    // Validate years and months
+    if (months < 0) {
+        years --;
+        months += 12;
+    }
+
+    if (months === 0) return `${years} years`;
+    return `${years} years, ${months} month${months > 1 ? 's' : ''}`;
+}
 ---
 <section id="experience" class="experience">
   <h2>Experience</h2>
@@ -13,7 +30,7 @@ import ViajobienImage from '../assets/images/viajobiencom_logo.jpeg';
         <div class="item__title animate">
           <a href="https://pircasolutions.com/" target="_blank" rel="noopener noreferrer">
             <h3>Pirca Solutions <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABlklEQVR4nO2ZTU4CQRBGn8NBRL2D3kS5i7CUGDe6c6VnQI6BXEPCHhVjSNpMUiSdyQgzVT3ds+iXdAghU/V91d3TP0Amk8k0ZApsAadov8ADCTkBNkrxzjORlDtDDzhpKgpgBMyBFbBrmGwrojX5XkIZGAJLQ8U2AcU7jfi1QXzbHihqxFe/twrmV/4TuAXO5LfQFP+IL7QGRhXxl3RHcUA8WgNz76Gy8qnEqw2svIfKYZNKvNqA/6ockE682oB58TiyKj83FN87A3XiX4+82XpjQCO+Nwa04nthoM2ErWO/ASw/oxuwike2I5u2G8MQBizDxkwIA0/Gyic38G0QP9UMm9AG7oEf4FFR+a1m4sZaiaPkd9mADZd7gDwHTLg8hMhDyISzFrDrM/EhBl7uUocK/1binLhceLk/tEHevCBj4jLxcs+0QW68IF8d38z5XEm+fe5rlJS7x/eKibF0b+g5MZC4k4r4hfX8YL2dtrQ1cBqiOkOpREzxC8kbjELmxEzeCk3/oWnadhJ3JmM+2rEzk8mQnj/pEK7ScEPHLAAAAABJRU5ErkJggg=="></h3>
-            <small>Jun 2019 - Present (5 years, 1 month)</small>
+            <small>Jun 2019 - Present ({calculateDate('2019-06-01')})</small>
           </a>
         </div>
         <div class="item__experience animate">
